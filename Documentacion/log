@@ -1,0 +1,38 @@
+TOLEADOR
+ 224 │     # --------------------------------------------------------
+ 225 │ 
+(python12)   snaider   ~/Universidad/Proyectos/pruebas  python p1.py                
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.15)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+(python12)   snaider   ~/Universidad/Proyectos/pruebas  nvim p1.py                  
+(python12)   snaider   ~/Universidad/Proyectos/pruebas  python p1.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.15)
+(python12)   snaider   ~/Universidad/Proyectos/Foquita/Documentacion git-[ main]-  ls
+(python12)   snaider   ~/Universidad/Proyectos/Foquita/Documentacion git-[ main]-  timeout 3 xclip -selection clipboard -o | head -c 200; echo "exit: $?"
+timeout 3 xclip -selection primary -o | head -c 200
+timeout 3 xclip -selection clipboard -o | head -c 200; echo "exit: $?"
+timeout 3 xclip -selection primary -o | head -c 200exit: 0
+timeout 3 xclip -selection clipboard -o | head -c 200; echo "exit: $?"
+timeout 3 xclip -selection primary -o | head -c 200%                                                    (python12)   snaider   ~/Universidad/Proyectos/Foquita/Documentacion git-[ main]-  ps -eo pid,stat,wchan:20,rss,cmd | grep -Ei 'clip|parcellite|copyq|greenclip|xclip|xsel|klipper'
+   1005 Sl   futex_do_wait        12976 clipcatd
+   3202 Sl   futex_do_wait        96192 /home/snaider/.config/discord/app-1.0.160/Discord --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3170 --enable-crash-reporter=884c6832-0164-4a31-84bf-7d64d61bb776,no_channel --user-data-dir=/home/snaider/.config/discord --standard-schemes=disclip --secure-schemes=disclip,sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=disclip,sentry-ipc --fetch-schemes=disclip,sentry-ipc --streaming-schemes=disclip --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,12751190284923956538,4674566437713343778,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports --disable-features=AllowAggressiveThrottlingWithWebSocket,DropInputEventsWhilePaintHolding,HardwareMediaKeyHandling,IntensiveWakeUpThrottling,LocalNetworkAccessChecks,MediaSessionService,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation,UseEcoQoSForBackgroundProcess,WaylandWpColorManagerV1,WinRetrieveSuggestionsOnlyOnDemand --variations-seed-version --pseudonymization-salt-handle=7,i,977979172841071568,9977696780953966404,4 --trace-process-track-uuid=3190708989122997041
+   3279 Sl   futex_do_wait        528916 /home/snaider/.config/discord/app-1.0.160/Discord --type=renderer --crashpad-handler-pid=3170 --enable-crash-reporter=884c6832-0164-4a31-84bf-7d64d61bb776,no_channel --user-data-dir=/home/snaider/.config/discord --standard-schemes=disclip --secure-schemes=disclip,sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=disclip,sentry-ipc --fetch-schemes=disclip,sentry-ipc --streaming-schemes=disclip --app-path=/home/snaider/.config/discord/app-1.0.160/resources/app.asar --no-sandbox --no-zygote --enable-blink-features=EnumerateDevices,AudioOutputDevices --autoplay-policy=no-user-gesture-required --openh264-library-path=/home/snaider/.config/discord/discord_asset_cache/openh264/libopenh264-2.5.1-linux64.7.so --enable-libopenh264 --ozone-platform=x11 --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --time-ticks-at-unix-epoch=-1790911832160809 --launch-time-ticks=1504561200 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,12751190284923956538,4674566437713343778,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports --disable-features=AllowAggressiveThrottlingWithWebSocket,DropInputEventsWhilePaintHolding,HardwareMediaKeyHandling,IntensiveWakeUpThrottling,LocalNetworkAccessChecks,MediaSessionService,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation,UseEcoQoSForBackgroundProcess,WaylandWpColorManagerV1,WinRetrieveSuggestionsOnlyOnDemand --variations-seed-version --pseudonymization-salt-handle=7,i,977979172841071568,9977696780953966404,4 --trace-process-track-uuid=3190708991934122588 --enable-node-leakage-in-renderers
+   3354 Sl   futex_do_wait        76152 /home/snaider/.config/discord/app-1.0.160/Discord --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3170 --enable-crash-reporter=884c6832-0164-4a31-84bf-7d64d61bb776,no_channel --user-data-dir=/home/snaider/.config/discord --standard-schemes=disclip --secure-schemes=disclip,sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=disclip,sentry-ipc --fetch-schemes=disclip,sentry-ipc --streaming-schemes=disclip --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,12751190284923956538,4674566437713343778,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports --disable-features=AllowAggressiveThrottlingWithWebSocket,DropInputEventsWhilePaintHolding,HardwareMediaKeyHandling,IntensiveWakeUpThrottling,LocalNetworkAccessChecks,MediaSessionService,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation,UseEcoQoSForBackgroundProcess,WaylandWpColorManagerV1,WinRetrieveSuggestionsOnlyOnDemand --variations-seed-version --pseudonymization-salt-handle=7,i,977979172841071568,9977696780953966404,4 --trace-process-track-uuid=3190708992871164437
+ 253225 S+   anon_pipe_read        4376 grep -Ei clip|parcellite|copyq|greenclip|xclip|xsel|klipper
+(python12)   snaider   ~/Universidad/Proyectos/Foquita/Documentacion git-[ main]-  watch -n 10 'ps -o pid,rss,etime,cmd -C greenclip,clipmenud,copyq,parcellite'
+(python12)   snaider   ~/Universidad/Proyectos/Foquita/Documentacion git-[ main]-  journalctl --user -b -p warning          # servicios de usuario
+journalctl -b -p err                     # errores del sistema
+journalctl -b | grep -iE 'oom|killed process|segfault'
+coredumpctl list                         # procesos que han crasheado
+coredumpctl info <PID>                   # detalle del último crash
+Failed to add match '#': Invalid argument
+Failed to add match '#': Invalid argument
+Oct 02 00:44:39 archlinux kernel: debugedit[65082]: segfault at 8 ip 00007fa38c57638e sp 00007fffacbdc550 error 4 in libdw-0.196.so[4438e,7fa38c53a000+60000] likely on CPU 7 (core 3, socket 0)
+Oct 02 00:44:39 archlinux kernel: debugedit[65098]: segfault at 8 ip 00007f1b126cd38e sp 00007ffe9e924650 error 4 in libdw-0.196.so[4438e,7f1b12691000+60000] likely on CPU 7 (core 3, socket 0)
+Oct 02 00:44:39 archlinux kernel: debugedit[65109]: segfault at 8 ip 00007fa37685038e sp 00007ffef1a543e0 error 4 in libdw-0.196.so[4438e,7fa376814000+60000] likely on CPU 4 (core 0, socket 0)
+Oct 02 00:44:39 archlinux kernel: debugedit[65132]: segfault at 8 ip 00007f2a174c038e sp 00007ffc720187e0 error 4 in libdw-0.196.so[4438e,7f2a17484000+60000] likely on CPU 7 (core 3, socket 0)
+Oct 02 00:44:39 archlinux kernel: debugedit[65153]: segfault at 8 ip 00007f976545e38e sp 00007ffe0a2246d0 error 4 in libdw-0.196.so[4438e,7f9765422000+60000] likely on CPU 3 (core 3, socket 0)
+Oct 02 00:44:39 archlinux kernel: debugedit[65165]: segfault at 8 ip 00007f76962dc38e sp 00007fffe9219950 error 4 in libdw-0.196.so[4438e,7f76962a0000+60000] likely on CPU 4 (core 0, socket 0)
+No coredumps found.
+zsh: no such file or directory: PID
+(python12)   snaider   ~/Universidad/Proyectos/Foquita/Documentacion git-[ main]-  

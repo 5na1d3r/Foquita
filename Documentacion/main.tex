@@ -1,0 +1,214 @@
+% ===============================================================
+% Informe en formato APA 7.ª edición (trabajo estudiantil)
+% Compilar con:  latexmk -pdfxe main.tex   (usa XeLaTeX + biber)
+% ===============================================================
+\documentclass[11pt,letterpaper]{article}
+
+% --- Idioma y fuente -------------------------------------------
+\usepackage{fontspec}
+\usepackage[spanish,es-tabla]{babel}
+\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+
+% Arial (APA 7 admite Arial 11 pt). Si no está instalada, usa
+% Liberation Sans, que es métricamente idéntica.
+\IfFontExistsTF{Arial}
+  {\setmainfont{Arial}\setsansfont{Arial}}
+  {\setmainfont{Liberation Sans}\setsansfont{Liberation Sans}}
+
+% --- Datos de la portada (edita aquí) --------------------------
+\newcommand{\titulo}{Aplicación de algoritmos de grafos en OSINT de archivos}
+\newcommand{\estudiante}{Jhonatan Vargas Ramos}
+\newcommand{\universidad}{Nombre de la universidad}
+\newcommand{\carrera}{Ingeniería de Sistemas}
+\newcommand{\asignatura}{Nombre de la asignatura}
+\newcommand{\semestre}{Semestre}
+\newcommand{\docente}{Nombre del docente}
+\newcommand{\fecha}{\today}
+
+% --- Página, interlineado y párrafos ---------------------------
+\usepackage[margin=1in]{geometry}      % márgenes de 2,54 cm
+\usepackage{setspace}
+\doublespacing                         % doble espacio en todo el texto
+\usepackage{ragged2e}
+\RaggedRight                           % alineado a la izquierda
+\setlength{\parindent}{0.5in}          % sangría de primera línea
+\setlength{\parskip}{0pt}
+\usepackage{indentfirst}               % también sangra tras un título
+\setlength{\emergencystretch}{3em}     % evita Overfull \hbox con \RaggedRight
+\usepackage{etoolbox}
+
+% --- Número de página arriba a la derecha ----------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}}
+
+% --- Niveles de título APA 7 -----------------------------------
+\setcounter{secnumdepth}{0}            % títulos sin numeración
+\setcounter{tocdepth}{3}
+\usepackage{titlesec}
+% Nivel 1: centrado, negrita
+\titleformat{\section}{\normalfont\normalsize\bfseries\centering}{}{0pt}{}
+% Nivel 2: izquierda, negrita
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{}{0pt}{}
+% Nivel 3: izquierda, negrita cursiva
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{}{0pt}{}
+% Nivel 4: sangrado, negrita, termina en punto, texto sigue en la línea
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{0pt}{}[.]
+% Nivel 5: sangrado, negrita cursiva, termina en punto
+\titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries\itshape}{}{0pt}{}[.]
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing*{\paragraph}{0.5in}{0pt}{1em}
+\titlespacing*{\subparagraph}{0.5in}{0pt}{1em}
+
+% --- Tablas y figuras APA --------------------------------------
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[labelfont=bf,textfont=it,labelsep=newline,
+  singlelinecheck=false,justification=raggedright,
+  position=top,skip=0pt]{caption}
+\AtBeginEnvironment{table}{\singlespacing}
+\AtBeginEnvironment{figure}{\singlespacing}
+\newcommand{\nota}[1]{\par\vspace{0.5\baselineskip}\noindent\textit{Nota.} #1}
+
+% --- Anexos ----------------------------------------------------
+\newcounter{anexo}
+\renewcommand{\theanexo}{\Alph{anexo}}
+\newcommand{\anexo}[1]{%
+  \ifnum\value{anexo}>0 \clearpage\fi
+  \refstepcounter{anexo}%
+  \begin{center}\textbf{Anexo \theanexo}\\ \textbf{#1}\end{center}%
+  \addcontentsline{toc}{subsection}{Anexo \theanexo. #1}}
+
+% --- Citas y referencias (APA 7 con biblatex-apa + biber) ------
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{referencias.bib}
+\defbibheading{bibliography}{\clearpage\section{#1}}
+
+\usepackage[hidelinks,pdftitle={\titulo},pdfauthor={\estudiante}]{hyperref}
+\usepackage{xurl}                       % permite cortar URLs y DOI largos
+
+% ===============================================================
+\begin{document}
+
+% 1. Portada
+\input{caratula}
+
+% 2. Índice
+\begin{singlespace}
+  \tableofcontents
+\end{singlespace}
+\clearpage
+
+% En la primera página del texto, APA repite el título en negrita
+\begin{center}\textbf{\titulo}\end{center}
+
+\section{Introducción}
+Escribe aquí el contenido de esta sección. Para citar usa
+\parencite{cormen2022} o \textcite{dijkstra1959}.
+
+\section{Descripción de la problemática}
+Escribe aquí el contenido de esta sección.
+
+\section{Objetivos}
+\subsection{Objetivo general}
+Escribe aquí el contenido de esta sección.
+\subsection{Objetivos específicos}
+Escribe aquí el contenido de esta sección.
+
+\section{Metodología de recopilación de datos}
+Escribe aquí el contenido de esta sección.
+
+\section{Evidencias del contexto real}
+Escribe aquí el contenido de esta sección.
+
+\section{Fundamento teórico}
+Escribe aquí el contenido de esta sección.
+
+\section{Construcción y representación del grafo}
+Escribe aquí el contenido de esta sección.
+
+\section{Aplicación de DFS}
+\subsection{Procedimiento}
+Escribe aquí el contenido de esta sección.
+\subsubsection{Resultados parciales}
+Ejemplo de nivel 3.
+\paragraph{Pila de exploración}
+Ejemplo de nivel 4: el texto continúa en la misma línea del título.
+
+\section{Aplicación de BFS}
+Escribe aquí el contenido de esta sección.
+
+\section{Aplicación de Dijkstra}
+Escribe aquí el contenido de esta sección.
+
+\section{Aplicación de Kruskal}
+Escribe aquí el contenido de esta sección.
+
+\section{Aplicación de Prim}
+Escribe aquí el contenido de esta sección.
+
+\section{Comparación de resultados}
+La Tabla~\ref{tab:complejidad} resume la complejidad de cada algoritmo.
+
+\begin{table}[ht]
+  \caption{Complejidad temporal de los algoritmos aplicados}
+  \label{tab:complejidad}
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    Algoritmo & Estructura auxiliar & Complejidad \\
+    \midrule
+    DFS      & Pila             & $O(V+E)$ \\
+    BFS      & Cola             & $O(V+E)$ \\
+    Dijkstra & Cola de prioridad & $O((V+E)\log V)$ \\
+    Kruskal  & Unión-búsqueda   & $O(E\log E)$ \\
+    Prim     & Cola de prioridad & $O(E\log V)$ \\
+    \bottomrule
+  \end{tabular}
+  \nota{$V$ = número de vértices; $E$ = número de aristas.}
+\end{table}
+
+% Ejemplo de figura (el título va ARRIBA de la imagen en APA):
+% \begin{figure}[ht]
+%   \caption{Grafo del caso de estudio}
+%   \label{fig:grafo}
+%   \includegraphics[width=0.8\textwidth]{grafo.png}
+%   \nota{Elaboración propia.}
+% \end{figure}
+
+\section{Descripción del sistema}
+Escribe aquí el contenido de esta sección.
+
+\section{Casos de prueba}
+Escribe aquí el contenido de esta sección.
+
+\section{Interpretación de resultados}
+Escribe aquí el contenido de esta sección.
+
+\section{Recomendaciones}
+Escribe aquí el contenido de esta sección.
+
+\section{Conclusiones}
+Escribe aquí el contenido de esta sección.
+
+% 21. Referencias bibliográficas
+\printbibliography[title={Referencias}]
+
+% 22. Anexos
+\clearpage
+\section{Anexos}
+\anexo{Código fuente del sistema}
+Escribe aquí el contenido del anexo.
+
+\anexo{Capturas de pantalla}
+Escribe aquí el contenido del anexo.
+
+\end{document}

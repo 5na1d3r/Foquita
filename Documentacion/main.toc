@@ -1,0 +1,28 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{Introducción}{3}{section*.1}%
+\contentsline {section}{Descripción de la problemática}{3}{section*.2}%
+\contentsline {section}{Objetivos}{3}{section*.3}%
+\contentsline {subsection}{Objetivo general}{3}{subsection*.4}%
+\contentsline {subsection}{Objetivos específicos}{3}{subsection*.5}%
+\contentsline {section}{Metodología de recopilación de datos}{3}{section*.6}%
+\contentsline {section}{Evidencias del contexto real}{3}{section*.7}%
+\contentsline {section}{Fundamento teórico}{3}{section*.8}%
+\contentsline {section}{Construcción y representación del grafo}{3}{section*.9}%
+\contentsline {section}{Aplicación de DFS}{3}{section*.10}%
+\contentsline {subsection}{Procedimiento}{3}{subsection*.11}%
+\contentsline {subsubsection}{Resultados parciales}{3}{subsubsection*.12}%
+\contentsline {paragraph}{Pila de exploración}{3}{paragraph*.13}%
+\contentsline {section}{Aplicación de BFS}{3}{section*.14}%
+\contentsline {section}{Aplicación de Dijkstra}{3}{section*.15}%
+\contentsline {section}{Aplicación de Kruskal}{4}{section*.16}%
+\contentsline {section}{Aplicación de Prim}{4}{section*.17}%
+\contentsline {section}{Comparación de resultados}{4}{section*.18}%
+\contentsline {section}{Descripción del sistema}{4}{section*.20}%
+\contentsline {section}{Casos de prueba}{4}{section*.21}%
+\contentsline {section}{Interpretación de resultados}{4}{section*.22}%
+\contentsline {section}{Recomendaciones}{4}{section*.23}%
+\contentsline {section}{Conclusiones}{4}{section*.24}%
+\contentsline {section}{Referencias}{5}{section*.25}%
+\contentsline {section}{Anexos}{6}{section*.26}%
+\contentsline {subsection}{Anexo A. Código fuente del sistema}{6}{anexo.1}%
+\contentsline {subsection}{Anexo B. Capturas de pantalla}{7}{anexo.2}%
